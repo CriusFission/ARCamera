@@ -31,10 +31,9 @@
       android:layout_height="wrap_content"
       android:layout_alignStart="@+id/surfaceview"
       android:layout_alignTop="@+id/surfaceview"
-      android:layout_marginStart="5dp"
-      android:layout_marginTop="687dp"
       android:onClick="clickToggleRecording"
       android:text="@string/toggleRecordingOn"
+      android:textColor="#000000"
       tools:ignore="OnClick" />
 
   <TextView

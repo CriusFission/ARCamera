@@ -40,6 +40,7 @@ import com.google.ar.core.Anchor;
 import com.google.ar.core.ArCoreApk;
 import com.google.ar.core.Camera;
 import com.google.ar.core.CameraIntrinsics;
+import com.google.ar.core.Config;
 import com.google.ar.core.Frame;
 import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
@@ -241,6 +242,10 @@ public class ArpActivity extends AppCompatActivity implements GLSurfaceView.Rend
 
                 // Create the session.
                 session = new Session(/* context= */ this);
+                // Add continuous autofocus
+                Config config = new Config(session);
+                config.setFocusMode(Config.FocusMode.AUTO);
+                session.configure(config);
 
             } catch (UnavailableArcoreNotInstalledException
                     | UnavailableUserDeclinedInstallationException e) {
